@@ -1,0 +1,165 @@
+
+
+/*
+LAYOUT: One-Column (Right) Fluid
+DESCRIPTION: Two-column 1140px fluid layout with one sidebar right of content, at tablet size- becomes 1 column
+
+Based on the 1140px Grid by Andy Taylor - http://cssgrid.net
+*/
+
+
+/*		Layout Max: 1140px
+		Columns: 4.85%
+		Gutters: 3.8%
+-------------------------------------------------------------------------------
+cols    1		2		3		4		5		6		7		8		9		10		11		12		
+px      4.85%	13.5%	22.15%	30.8%	39.45%	48.1%	56.75%	65.4%	74.05%	82.7%	91.35%	100%
+*/
+
+
+
+img, object, embed {
+max-width: 100%;
+}
+
+body {
+	background: url(1140gs/1140gs.png) repeat-y top center;
+}
+#header {
+    position:relative;
+}
+#branding {
+	width: 90%;
+	max-width: 1140px;
+	margin: 0 auto;
+}
+#access {
+    position:relative;
+    overflow:hidden;
+}
+.menu {
+	width: 90%;
+	max-width: 1140px;
+	margin: 0 auto;
+}
+#main {
+	width: 90%;
+	max-width: 1140px;
+	margin: 0 auto;
+    position:relative;
+	overflow: auto;
+}
+#container {
+    width: 65.4%;
+    float:left;
+	margin-right: 3.8%;
+	float: left;
+}
+#content {
+    margin:0;
+    width: 100%;
+    overflow:hidden;
+}
+.main-aside {
+	width: 30.8%;
+    float:left;
+	margin-right: 0;
+}
+#primary { 
+	border: 0 !important;
+}
+#secondary {
+    clear:right;
+}
+#footer {    
+    clear:both;
+}
+#subsidiary {
+	width: 90%;
+	max-width: 1140px;
+	margin: 0 auto;
+    overflow:hidden;
+}
+#subsidiary .aside {
+    width: 30.8%;
+    float:left;
+    margin:0 3.8% 0 0;
+}
+#subsidiary #third {
+    margin:0;
+}
+#siteinfo {
+    clear:both;
+	width: 90%;
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
+
+/* =Page Templates
+-------------------------------------------------------------- */
+
+/*
+    Full Width Template
+*/
+
+.page-template-template-page-fullwidth-php #container {
+	width: 100%;
+}
+
+.page-template-template-page-fullwidth-php #content {
+	width:100%;
+}
+
+.page-template-template-page-fullwidth-php #comments {
+    width: 65.4%;
+}
+
+
+@media only screen and (max-width: 1023px) {
+	body {
+	font-size: 0.8em; /* Makes type a bit smaller at 1024 so layout doesn't look unbalanced */
+	line-height: 1.5em;	/* As above */
+	}
+}
+
+@media handheld, only screen and (max-width: 767px) {
+
+	body { 
+		font-size: 16px;
+		line-height: 24px;
+		-webkit-text-size-adjust: none;		/* Stops the iPhone scalling type up */ 
+	}
+	
+	#container {
+		width: 100%;
+		margin: 0 0 22px 0;
+	}
+	
+	.main-aside {
+		margin-top: 22px;
+		width: 100%;
+		float: none;
+		clear: both;
+	}
+	
+	#primary {
+		margin-right: 3.8%;
+	}
+	#footer { 
+		margin-top;
+	}
+	#subsidiary {
+		padding-top: 0;
+	}
+	#subsidiary .aside {
+		width: 100%;
+		float: none;
+		margin:0 0 22px 0;
+	}
+
+	.page-template-template-page-fullwidth-php #comments {
+		width: 100%;
+	}
+
+}

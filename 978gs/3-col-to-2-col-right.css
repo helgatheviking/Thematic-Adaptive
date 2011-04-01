@@ -1,0 +1,510 @@
+/*   
+A 3 Column Adaptive Layout for Thematic on the 978gs
+
+At larges the #primary sidebar is on the left and the #secondary on the right.  
+At tablet size, #primary and #secondary become one column on the right.  
+At mobile sizes becomes 1 single column.  
+
+978gs typically uses 16col at the larger size, but I used a 12col grid at the same size to preserve Thematic's proportions 
+
+978gs doesn't have a widescreen-mobile layout so I added one, essentially the same as the 300px mobile layout but wider,  but 444px
+
+*/
+
+.entry-content img, .entry-content iframe, .entry-content object, .entry-content embed { max-width: 100%;}
+
+/*		Widescreen Layout: 1218px
+		Columns: 48px.
+		Gutters: 30px.
+		Outer margins: 15px.
+-------------------------------------------------------------------------------
+cols    1		2		3		4		5		6		7		8		9		10		11		12		13		14		15		16		
+px      78		156		234		312		390		468		546		624		702		780		858		936		1014	1092	1170	1248
+*/
+
+body {
+		background: #f3eaf3 url(grids/1218-grid-12col.png) repeat-y top center;
+		background-color: pink;
+	}
+
+#header {
+    position:relative;
+}
+#branding {
+    width:1218px;
+    margin:0 auto;
+}
+#access {
+    position:relative;
+    overflow:hidden;
+}
+.menu {
+    width:1218px;
+    margin:0 auto;
+}
+#main {
+    width:1248px;
+    margin:0 auto;
+    overflow:hidden;
+    position:relative;
+}
+#container {
+    width:1218px;
+    float:left;
+    margin:0 0 0 15px;
+}
+#content {
+	margin: 0 312px;
+    overflow:hidden;
+}
+#primary {
+    width:282px;
+    float:left;
+	margin: 0 0 0 -1218px;
+}
+* html #primary {
+	left: 15px;
+	position: relative;
+}
+#secondary {
+    width:282px;
+    float:left;
+	margin: 0 0 0 -282px;
+}
+#footer {    
+    clear:both;
+}
+#subsidiary {
+    width:1218px;
+    margin:0 auto;
+    overflow:hidden;
+}
+#subsidiary .aside {
+    width:386px;
+    float:left;
+    margin:0 30px 0 0;
+}
+#subsidiary #third {
+    margin-right: 0;
+}
+#siteinfo {
+    clear:both;
+    width:1218px;
+    margin:0 auto;
+}
+
+/* =Page Templates
+-------------------------------------------------------------- */
+
+/*
+    Full Width Template
+*/
+
+.page-template-template-page-fullwidth-php #container {
+	margin: 0 0 0 15px;
+    width: 1218px;
+}
+
+.page-template-template-page-fullwidth-php #content {
+	margin: 0;
+	width:100%;
+}
+
+.page-template-template-page-fullwidth-php #comments {
+    width:698px;
+}
+
+
+/*		Regular Layout: 978px
+		Columns: 54px.
+		Gutters: 30px.
+		Outer margins: 12px.
+-------------------------------------------------------------------------------
+cols    1		2		3		4		5		6		7		8		9		10		11		12		
+px      84		168		252		336		420		504		588		672		756		840		924		1008
+    */
+
+@media only screen and (min-width: 1002px) and (max-width: 1247px) {
+	
+	body {
+		background: #e5ffe9 url(grids/978-grid-12col.png) repeat-y top center;
+		background-color: #cbebb6;
+	}
+
+	#branding {
+		width:978px;
+	}
+	.menu {
+		width:978px;
+	}
+	#main {
+		width:1002px;
+	}
+	#container {
+		width:978px;
+		margin:0 0 0 12px;
+	}
+	#content {
+		margin: 0 252px;
+	}
+	#primary {
+		width:222px;
+		margin: 0 0 0 -978px;
+	}
+	* html #primary {
+		left: 15px;
+	}
+	#secondary {
+		width:222px;
+		margin: 0 0 0 -222px;
+	}
+	#subsidiary {
+		width:978px;
+	}
+	#subsidiary .aside {
+		width:306px;
+		margin:0 30px 0 0;
+	}
+	#subsidiary #third {
+		margin-right: 0;
+	}
+	#siteinfo {
+		width:978px;
+	}
+
+	/* =Page Templates
+	-------------------------------------------------------------- */
+
+	/*
+		Full Width Template
+	*/
+
+	.page-template-template-page-fullwidth-php #container {
+		width:978px;
+	}
+
+	.page-template-template-page-fullwidth-php #content {
+		width:100%;
+	}
+
+	.page-template-template-page-fullwidth-php #comments {
+		width:558px;
+	}
+
+	
+	
+}
+
+
+/*		Tablet Layout: 768px. Shrinks down to 2 columns w/ left sidebar
+		Columns: 44;
+		Gutters: 20px.
+		Outer margins: 10px.
+		Inherits styles from: Default Layout.
+-----------------------------------------------------------------
+cols    1		2		3		4		5		6		7		8		9		10	
+px      64		128		192		256		320		384		448		512		576		640	
+    */
+
+@media only screen and (min-width: 768px) and (max-width: 1001px) {
+	
+	body {
+		background: #e5eeff url(grids/748-grid-12col.png) repeat-y top center;
+		background-color: lightblue;
+	}
+
+	#header {
+		position:relative;
+	}
+	#branding {
+		width:748px;
+		margin:0 auto;
+	}
+	#access {
+		position:relative;
+		overflow:hidden;
+	}
+	.menu {
+		width:748px;
+		margin:0 auto;
+	}
+	#main {
+		width:768px;
+		margin:0 auto;
+		overflow:hidden;
+		position:relative;
+	}
+	#container {
+		width:492px;
+		float:left;
+		margin:0 0 0 10px;
+	}
+	#content {
+		width:100%;
+		overflow:hidden;
+		margin: 0;
+	}
+	#primary.main-aside, #secondary.main-aside {
+		width:236px;
+		float:right;
+		position:relative;
+		right:10px;
+	}	
+	#footer {    
+		clear:both;
+	}
+	#subsidiary {
+		width:748px;
+		margin:0 auto;
+		overflow:hidden;
+	}
+	#subsidiary .aside {
+		width:236px;
+		float:left;
+		margin:0 20px 0 0;
+	}
+	#subsidiary #third {
+		margin:0;
+	}
+	#siteinfo {
+		clear:both;
+		width:748px;
+		margin:0 auto;
+	}
+
+	/* =Page Templates
+	-------------------------------------------------------------- */
+
+	/*
+		Full Width Template
+	*/
+
+	.page-template-template-page-fullwidth-php #container {
+		margin:0 10px 0 0;
+		width:748px;
+	}
+
+	.page-template-template-page-fullwidth-php #content {
+		margin: 0 0 0 0px;
+		width:748px;
+	}
+
+	.page-template-template-page-fullwidth-php #comments {
+		width:492px;
+	}
+	
+}
+
+
+
+/*		Wide Mobile Layout: 444px.   
+		Columns: 38
+		Gutters: 20px.
+		Outer margins: 10px.
+		Inherits styles from: Default Layout, Mobile Layout.
+------------------------------------------------------------
+cols    1		2		3		4		5		6		7		8
+px      58		116		174		232		290		348		406		464*/
+
+@media only screen and (min-width: 464px) and (max-width: 767px) {
+
+	body { background: violet url(grids/444-grid-8col.png) repeat-y top center; }
+	
+	#header {
+		position:relative;
+	}
+	#branding {
+		width:444px;
+		margin:0 auto;
+	}
+	#access {
+		position:relative;
+		overflow:hidden;
+	}
+	.menu {
+		width:444px;
+		margin:0 auto;
+	}
+	#main {
+		width:444px;
+		margin:0 auto;
+		overflow:hidden;
+		position:relative;
+	}
+	#container {
+		width:444px;
+		float:none;
+		display: block;
+		margin: 0;
+		clear: both;
+	}
+	#content {
+		width:444px;
+		overflow:hidden;
+		margin: 0;
+	}
+	#primary.main-aside, #secondary.main-aside {
+		width:444px;
+		display: block;
+		position:relative;
+		margin: 0 0 18px 0;
+		right: 0;
+		float: none;
+		clear: both;
+	}
+	#primary.main-aside {
+		margin-top: 18px;
+	}
+	#footer {    
+		clear:both;
+	}
+	#subsidiary {
+		width:444px;
+		margin:0 auto;
+		overflow:hidden;
+	}
+	#subsidiary .aside {
+		width:444px;
+		display: block;
+		margin:0 0 18px 0;
+	}
+	#subsidiary #third {
+		margin-left: 0;
+	}
+	#siteinfo {
+		clear:both;
+		width:444px;
+		margin:0 auto;
+	}
+	
+
+	/* =Page Templates
+	-------------------------------------------------------------- */
+
+	/*
+		Full Width Template
+	*/
+
+	.page-template-template-page-fullwidth-php #container {
+		margin:0;
+		width:444px;
+	}
+
+	.page-template-template-page-fullwidth-php #content {
+		margin: 0 0 0 0px;
+		width:444px;
+	}
+
+	.page-template-template-page-fullwidth-php #comments {
+		width:444px;
+	}	
+	
+
+}
+
+/*		Mobile Layout: 300px.
+		Columns: 27
+		Gutters: 12px.
+		Outer margins: 10px.
+		Inherits styles from: Default Layout.
+---------------------------------------------
+cols    1		2		3		4		5		6		7		8
+px      39		78		117		156		195		234		273		312
+*/
+
+@media only screen and (min-width: 0px) and (max-width: 463px) {
+	
+	body {
+		background: #fde5ff url(grids/300-grid-8col.png) repeat-y top center;
+		background-color: gold;
+	}
+	
+	#header {
+		position:relative;
+	}
+	#branding {
+		width:300px;
+		margin:0 auto;
+	}
+	#access {
+		position:relative;
+		overflow:hidden;
+	}
+	.menu {
+		width:300px;
+		margin:0 auto;
+	}
+	#main {
+		width:300px;
+		margin:0 auto;
+		overflow:hidden;
+		position:relative;
+	}
+	#container {
+		width:300px;
+		float:right;
+		display: block;
+		margin: 0;
+	}
+	#content {
+		width:300px;
+		overflow:hidden;
+		margin: 0;
+	}
+	#primary.main-aside, #secondary.main-aside {
+		width:300px;
+		display: block;
+		position:relative;
+		margin: 0 0 18px 0;
+		right: 0;
+		float: none;
+		clear: both;
+	}
+	#primary.main-aside {
+		margin-top: 18px;
+	}
+	#footer {    
+		clear:both;
+	}
+	#subsidiary {
+		width:300px;
+		margin:0 auto;
+		overflow:hidden;
+	}
+	#subsidiary .aside {
+		width:300px;
+		display: block;
+		margin:0 0 18px 0;
+	}
+	#subsidiary #third {
+		margin:0;
+	}
+	#siteinfo {
+		clear:both;
+		width:300px;
+		margin:0 auto;
+	}
+
+	/* =Page Templates
+	-------------------------------------------------------------- */
+
+	/*
+		Full Width Template
+	*/
+
+	.page-template-template-page-fullwidth-php #container {
+		margin:0;
+		width:300px;
+	}
+
+	.page-template-template-page-fullwidth-php #content {
+		margin: 0 0 0 0px;
+		width:300px;
+	}
+
+	.page-template-template-page-fullwidth-php #comments {
+		width:300px;
+	}
+	
+	
+}
