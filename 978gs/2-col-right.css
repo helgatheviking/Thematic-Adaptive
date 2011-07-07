@@ -1,5 +1,5 @@
 /*   
-A 3 Column Adaptive Layout for Thematic on the 978gs
+A 2 Column Adaptive Layout for Thematic on the 978gs
 
 At larges the #primary sidebar is on the left and the #secondary on the right.  
 At tablet size, #primary and #secondary become one column on the right.  
@@ -146,7 +146,7 @@ px      84		168		252		336		420		504		588		672		756		840		924		1008
 		overflow:hidden;
 	}
 	.main-aside {
-		width:302px;
+		width:306px;
 		float:right;
 		position:relative;
 		right:12px;
